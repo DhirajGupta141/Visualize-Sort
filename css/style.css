@@ -64,8 +64,6 @@ nav .header_right .nav-heading {
   font-size: xxx-large;
   padding: 3% 0%;
 }
-/* Error In placing will do letter after learning grid in css achhe se */
-/* 16.66667% */
 
 /* Lots of error handdled finally */
 nav .header_right .algos {
@@ -105,7 +103,7 @@ nav .header_right .algos .butt_locked:hover {
 
 nav .header_right .algos .butt_selected
 {
-  /* When we start the execution the background color of buttons becomes  */
+  
   background-color: white;
   color: green;
 }
@@ -118,7 +116,7 @@ nav .header_right .algos .butt_selected:hover {
 
 nav .header_right .algos .butt_unselected:hover
 {
-  /* When we start the execution the background color of buttons becomes blue */
+  
   background-color: blue;
   cursor: pointer;
 }
