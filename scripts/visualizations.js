@@ -1,5 +1,5 @@
 
-//We only have to change background-color and height of the sorting element.
+
 
 var speed=1000;
 
@@ -22,41 +22,41 @@ function vis_speed()
                 break;
     }
     
-    delay_time=10000/(Math.floor(array_size/10)*speed);//Decrease numerator to increase speed.
 }
 
-var delay_time=10000/(Math.floor(array_size/10)*speed);//Decrease numerator to increase speed.
-var c_delay=0;//This is updated on every div change so that visualization is visible.
+var delay_time=10000/(Math.floor(array_size/10)*speed);
+var c_delay=0;
 
 function div_update(cont,height,color)
 {
-    // cont is nothing but a div element
-    //setTimeout Function  calls the function() after c_delay time interval
-    //it takes two argument 1st is the function and second is the duration(delay)
-    window.setTimeout(function(){
-        cont.style=" margin:0% " + margin_size + "%; width:" + (100/array_size-(2*margin_size)) + "%; height:" + height + "%; background-color:" + color + ";";
-    }
-    ,
-    c_delay=c_delay+delay_time); 
+    window.setTimeout
+    (
+        function()
+        {
+            cont.style=" margin:0% " + margin_size + "%; width:" + (100/array_size-(2*margin_size)) + "%; height:" + height + "%; background-color:" + color + ";";
+        }
+        ,
+        c_delay=c_delay+delay_time
+    ); 
 }
 
 function enable_buttons()
 {
-    window.setTimeout(function(){
-        //butts_algos is an array of buttons
-        for(var i=0;i<butts_algos.length;i++)   // all button that is bubble merge selection..
+    window.setTimeout
+    (
+        function()
         {
-            //classList adds the css class to the given element 
-            //classList is used for dynamic styling of elements
-            butts_algos[i].classList=[];
-            butts_algos[i].classList.add("butt_unselected"); // butt_unselected is a css class
-
-            butts_algos[i].disabled=false;
-            inp_as.disabled=false;
-            inp_gen.disabled=false;
-            inp_aspeed.disabled=false;
+                for(var i=0;i<butts_algos.length;i++)   
+                {
+                    butts_algos[i].classList=[];
+                    butts_algos[i].classList.add("butt_unselected");
+                    butts_algos[i].disabled=false;
+                    inp_as.disabled=false;
+                    inp_gen.disabled=false;
+                    inp_aspeed.disabled=false;
+                }
         }
-    },
-
-    c_delay+=delay_time);
+        ,
+        c_delay+=delay_time
+    );
 }
