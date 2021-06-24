@@ -2,8 +2,6 @@
 
 function Insertion()
 {
-    c_delay=0;
-
     for(var j=0;j<array_size;j++)
     {
         div_update(divs[j],div_sizes[j],"yellow");//Color update
