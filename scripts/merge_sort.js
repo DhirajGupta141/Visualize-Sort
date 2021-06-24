@@ -1,7 +1,6 @@
 
 function Merge()
 {
-    c_delay=0;
 
     merge_partition(0,array_size-1);
 
