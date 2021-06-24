@@ -2,7 +2,6 @@
 
 function Heap()
 {
-    c_delay=0;
 
     heap_sort();
     
@@ -59,17 +58,17 @@ function max_heapify(n,i)
     {
         swap(i,largest);
 
-        max_heapify(n,largest);
+        max_heapify(n,largest);//again heapifying it!!
     }
 }
 
 function heap_sort()
 {
+    //building the heap
     for(var i=Math.floor(array_size/2)-1;i>=0;i--)
     {
         max_heapify(array_size,i);
     }
-
     for(var i=array_size-1;i>0;i--)
     {
         swap(0,i);
