@@ -1,11 +1,14 @@
 
 function Quick()
 {
-
+    c_delay=0;
     quick_sort(0,array_size-1);
 
     enable_buttons();
 }
+//i--> Boundary between the elements that are less than pivot and those greater than pivot(left of i are less then pivot and other are greater than pivot)
+//j--> Boundary between the partitioned and unpartitioned part of array
+
 
 function quick_partition (start, end)
 {
@@ -33,7 +36,7 @@ function quick_partition (start, end)
                 div_update(divs[i],div_sizes[i],"blue");//Height update
                 div_update(divs[j],div_sizes[j],"blue");//Height update
 
-                i += 1;
+                i += 1;  //increasing the boundary of the elements that are less than the pivot elements
             }
     }
     div_update(divs[start],div_sizes[start],"red");//Color update
@@ -45,7 +48,8 @@ function quick_partition (start, end)
 
     div_update(divs[start],div_sizes[start],"red");//Height update
     div_update(divs[i-1],div_sizes[i-1],"red");//Height update
-
+    
+    //these are the element less than pivot and are at correct position based on current pivote element
     for(var t=start;t<=i;t++)
     {
         div_update(divs[t],div_sizes[t],"green");//Color update
